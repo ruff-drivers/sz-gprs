@@ -1,0 +1,46 @@
+{
+    "name": "sz-gprs",
+    "version": "0.1.0",
+    "description": "Driver for gprs module made by shuncom.",
+    "author": "Nanchao Inc.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ruff-drivers/sz-gprs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ruff-drivers/sz-gprs/issues"
+    },
+    "homepage": "https://github.com/ruff-drivers/sz-gprs",
+    "keywords": [
+        "ruff",
+        "driver",
+        "gprs",
+        "shuncom"
+    ],
+    "main": "src/index.js",
+    "engines": {
+        "ruff": ">=1.6.2 <2.0.0"
+    },
+    "boards": {
+        "ruff-mbd-v1": "^4.2.0",
+        "ruff-1294-v30": "^0.2.4"
+    },
+    "scripts": {
+        "install-sdk": "rvm install --local",
+        "install-rap-dependencies": "rap install",
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "ruff ./test/test.js"
+    },
+    "devDependencies": {
+        "eslint": "^2.13.1",
+        "ruff-standard": "^0.1.6",
+        "rvm": "^0.3.2"
+    },
+    "ruff": {
+        "devDependencies": {
+            "t": "^0.1.7"
+        }
+    }
+}

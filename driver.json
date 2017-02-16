@@ -1,0 +1,31 @@
+{
+    "models": [
+        "sz11-01"
+    ],
+    "inputs": {
+        "pwr": {
+            "type": "gpio",
+            "args": {
+                "direction": "out",
+                "level": "low"
+            }
+        },
+        "cfg": {
+            "type": "gpio",
+            "args": {
+                "direction": "out",
+                "level": "low"
+            }
+        },
+        "uart": {
+            "type" : "uart",
+            "args": {
+                "baudRate": 38400,
+                "stopBits": 1,
+                "dataBits": 8,
+                "parity": "none",
+                "flowControl": "none"
+            }
+        }
+    }
+}
