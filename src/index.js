@@ -9,7 +9,6 @@ var Level = require('gpio').Level;
 var driver = require('ruff-driver');
 var async = require('ruff-async');
 var Expect = require('./expect');
-var ReadStreaming = require('./read-streaming');
 var Transceiver = require('./transceiver');
 
 var BAUDRATE = 38400;
@@ -138,8 +137,7 @@ module.exports = driver({
         this._IDLE_TIMEOUT = args.IDLE_TIMEOUT || 20000;
         this._EXIT_CONFIG_TIMEOUT = args.EXIT_CONFIG_TIMEOUT || 5000;
 
-        this._readStream = new ReadStreaming(this._uart);
-        this._readStream.on('data', function (data) {
+        this._uart.on('data', function (data) {
             that._processUartData(data);
         });
         this._transceiver = new Transceiver(this._uart);
@@ -147,7 +145,6 @@ module.exports = driver({
             that.emit('data', data);
         });
 
-        this._readStream.start();
     },
     exports: prototype
 });

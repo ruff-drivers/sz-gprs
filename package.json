@@ -1,6 +1,6 @@
 {
     "name": "sz-gprs",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Driver for gprs module made by shuncom.",
     "author": "Nanchao Inc.",
     "license": "MIT",
