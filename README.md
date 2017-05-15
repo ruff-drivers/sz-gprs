@@ -6,8 +6,8 @@ The gprs module driver.
 
 ## Supported Engines
 
-* Ruff: >=1.7.0 <2.0.0
-* RuffLite: >=0.7.2 <1.0.0
+* Ruff: >=1.9.0 <2.0.0
+* RuffLite: >=0.8.0 <1.0.0
 
 ## Supported Models
 
